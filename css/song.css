@@ -1,0 +1,53 @@
+.songList {
+}
+
+.songList-actions {
+  display: flex;
+  gap: .96rem;
+  align-items: center;
+  inline-size: 18.187rem;
+}
+
+.songList-artist {
+  inline-size: 20rem;
+}
+
+.songList-album {
+  inline-size: 15.6rem; 
+}
+
+.song-list-time {
+  display: flex;
+  gap: 4rem;
+}
+
+.song-container {
+  display: flex;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+
+.songList-playControl {
+  border: 1px solid var(--white);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1rem;
+  padding: .5rem;
+  block-size: 2.5rem;
+  inline-size: 2.5rem;
+}
+
+.songList-heartControl {
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  /* color: var(--white); */
+  cursor: pointer;
+  font-size: 2rem;
+  padding: .5rem;
+  block-size: 2.5rem;
+  inline-size: 2.5rem;
+}
+

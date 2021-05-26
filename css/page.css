@@ -1,0 +1,23 @@
+@import url('../css/playlist-list.css');
+@import url('../css/search.css');
+@import url('../css/navigation.css');
+@import url('../css/header.css');
+@import url('../css/sticky.css');
+
+.page {
+  padding-inline-end: 2rem;
+  padding-inline-start: 2rem;
+  padding-block-end: 2rem;
+}
+
+.page-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.page .header {
+  margin-block-end: 1rem;
+  margin-inline-end: -1.5rem;
+  margin-inline-start: -1.5rem;
+}

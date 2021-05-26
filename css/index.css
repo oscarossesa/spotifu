@@ -1,0 +1,43 @@
+@import url('../css/icons.css');
+@import url('../css/fonts.css');
+@import url('../css/body.css');
+@import url('../css/link.css');
+@import url('../css/button-icon.css');
+@import url('../css/sidebar.css');
+@import url('../css/slider.css');
+@import url('../css/player.css');
+@import url('../css/page.css');
+@import url('../css/layout.css');
+@import url('../css/scrollbar.css');
+@import url('../css/song.css');
+
+:root {
+  font-size: 16px; /* font for default in all browsers */
+  --primary: #00B050;
+  --white: #FFFFFF;
+  --gray10: #B3B3B3;
+  --gray20: #737373;
+  --gray30: #282828;
+  --gray40: #181818;
+  --gray50: #121212;
+  --gray60: #000000;
+  --basefontFamily: Avenir, Helvetica, sans-serif;
+  --headLine1: bold 2rem/normal var(--basefontFamily);
+  --headLine2: bold 1.5rem/1.75rem var(--basefontFamily);
+  --baseFont: normal .875rem/1.375rem var(--basefontFamily);
+  --baseFontBold: bold .875rem/1.375rem var(--basefontFamily);
+  --button: bold .875rem/1rem var(--basefontFamily);
+  --small: normal .75em/normal var(--basefontFamily);
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1367px) {
+  :root {
+    font-size: 20px;
+  }
+}

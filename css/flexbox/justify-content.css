@@ -1,0 +1,15 @@
+.justifyContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.justifyContent > img:nth-of-type(1) {
+ align-self: flex-end;
+}
+
+.justifyContent > img:nth-of-type(2) {
+  align-self: center;
+ }

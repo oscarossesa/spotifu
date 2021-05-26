@@ -1,0 +1,107 @@
+.flex {
+  display: flex;
+}
+
+/* 
+  flex-grow: capacidad de cuento se agranda 
+  0=no se agranda
+  1=toma el 100%
+
+  flex-shrink: capacidad de cuanto se achica
+  default value: 1
+
+  flex-basis: base flexible - tamaño por defecto de un elemento 
+  default value: auto
+  note: in case this not working, set the value to 0% o 100%,
+  any value different to auto or 1.
+*/
+  
+/* first exercise
+
+  formula
+  (wrapper - sum of basis) / sum of flex-grow <-- if it has no padding or borders
+  the before result is equivalent to the base of one div, 
+  then, we can add the basis of the element to get the total 
+  pixel of the div
+
+  (1024 - 250) / 3 = 258px base
+  first div: 258 + 100 = 358px (base + basis)
+  second div: 258 + 100 = 358px (base + basis)
+  third div: 258 + 50 = 308px (base + basis)
+*/
+
+  /* .flex > * {
+    border: 1px solid red !important;
+    
+    flex-grow: 1;
+    flex-basis: 100px;
+    padding: 1rem !important;
+  }
+  
+  .flex > p {
+    border: 1px solid green !important;
+    flex-basis: 50px;
+  } */
+  
+/* 
+  second exercise 
+
+  formula
+  ((wrapper - basis - padding - border) / flex-grow) + basis of 1 box + padding of 1 box + border of 1 box
+  
+  1024 - 250 = 774 wrapper - sum of basis
+  16 * 6 = 96 sum of padding
+  1 * 6 = 6 sum of borders
+  774 - 96 - 6 = 672 wrapper - sum of basis - sum of padding - sum of borders
+  672 / 5 = 134.4 (wrapper - sum of basis - sum of padding - sum of borders) % sum of flex-grow; first 2; second 2; third 1; 2+2+1=5
+
+  134.4 these are the pixels of one flex-grow
+  134.4 * 2 = 268.8 these are the pixels of the one div without basis, padding and borders
+
+  268.8 + 100 + 32 + 2 = 402.8px; pixels of one flex-grow + basis + padding + border these values are per individual div.
+  268.8 + 100 + 32 + 2 = 402.8px; pixels of one flex-grow + basis + padding + border these values are per individual div.
+  134.4 + 50 + 32 + 2 = 218.4px; pixels of one flex-grow + basis + padding + border these values are per individual div.
+*/
+
+  .flex > * {
+  border: 1px solid red !important;
+
+  flex-grow: 2;
+  flex-basis: 100px;
+  padding: 1rem !important;
+}
+
+.flex > p {
+  border: 1px solid green !important;
+  flex-grow: 1;
+  flex-basis: 50px;
+}
+
+/*
+  third exercise
+*/
+
+.flex-shrink {
+  display: flex;
+  background: lightgray;
+}
+
+.flex-shrink > img {
+  inline-size: 400px;
+  flex-shrink: 0;
+}
+
+.flex-shrink > div {
+  border: 1px solid red;
+  /*
+  flex-grow: 1;
+  flex-basis: 100%; /* this can be set in 0%, any value different to auto or 1 */
+
+  /* 
+    we can set flex: 1, by default it's equivalent to:
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+  */
+  flex: 1;
+}
